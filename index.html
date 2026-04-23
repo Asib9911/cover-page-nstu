@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cover Page Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>📄 Cover Page Generator</h2>
+
+  <div class="form">
+    <input id="title" placeholder="Report Title">
+    <input id="courseName" placeholder="Course Name">
+    <input id="courseCode" placeholder="Course Code">
+
+    <input id="studentName" placeholder="Student Name">
+    <input id="studentId" placeholder="Student ID">
+    <input id="yearTerm" placeholder="Year & Term">
+
+    <input id="teacherName" placeholder="Teacher Name">
+    <input id="designation" placeholder="Designation">
+
+    <button onclick="generate()">Generate</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <div id="preview" class="page">
+    <img src="logo.png" class="logo">
+
+    <h1 id="pTitle">Your Title</h1>
+
+    <p><b>Course Name:</b> <span id="pCourseName"></span></p>
+    <p><b>Course Code:</b> <span id="pCourseCode"></span></p>
+
+    <div class="grid">
+      <div>
+        <h3>Submitted by</h3>
+        <p id="pStudentName"></p>
+        <p id="pStudentId"></p>
+        <p id="pYearTerm"></p>
+      </div>
+
+      <div>
+        <h3>Submitted to</h3>
+        <p id="pTeacherName"></p>
+        <p id="pDesignation"></p>
+      </div>
+    </div>
+
+    <h2>Noakhali Science and Technology University</h2>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
